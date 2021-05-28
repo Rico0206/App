@@ -1,0 +1,56 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Binding Classes\**" />
+    <Compile Remove="Business Class\**" />
+    <Compile Remove="Command\**" />
+    <Compile Remove="ValueConverter\**" />
+    <Compile Remove="ViewModel\**" />
+    <Compile Remove="WindowViewModel\**" />
+    <EmbeddedResource Remove="Binding Classes\**" />
+    <EmbeddedResource Remove="Business Class\**" />
+    <EmbeddedResource Remove="Command\**" />
+    <EmbeddedResource Remove="ValueConverter\**" />
+    <EmbeddedResource Remove="ViewModel\**" />
+    <EmbeddedResource Remove="WindowViewModel\**" />
+    <None Remove="Binding Classes\**" />
+    <None Remove="Business Class\**" />
+    <None Remove="Command\**" />
+    <None Remove="ValueConverter\**" />
+    <None Remove="ViewModel\**" />
+    <None Remove="WindowViewModel\**" />
+    <Page Remove="Binding Classes\**" />
+    <Page Remove="Business Class\**" />
+    <Page Remove="Command\**" />
+    <Page Remove="ValueConverter\**" />
+    <Page Remove="ViewModel\**" />
+    <Page Remove="WindowViewModel\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <PackageReference Include="MaterialDesignThemes" Version="4.1.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.6" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="5.0.6">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\" />
+    <Folder Include="Pages\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessClass\BusinessClass.csproj" />
+  </ItemGroup>
+
+</Project>

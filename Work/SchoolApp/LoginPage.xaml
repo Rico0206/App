@@ -1,0 +1,63 @@
+﻿<Page x:Class="SchoolApp.LoginPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:SchoolApp"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+      Title="LoginPage">
+
+    <Border Background="#FFDADADA">
+        <Grid>
+            <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+            <StackPanel
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center"
+            TextBlock.TextAlignment="Center"                >
+
+                
+                <Border
+                    MinWidth="200"
+                    Background="White"
+                    VerticalAlignment="Center"
+                    Padding="30"
+                    CornerRadius="10"
+                    Width="500"
+                    MaxWidth="650">
+
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="30" 
+                                  Color="LightGray"
+                                  ShadowDepth="0">
+                        </DropShadowEffect>
+                    </Border.Effect>
+
+                    <StackPanel>
+                        <TextBlock Text="Login"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           HorizontalAlignment="Left"
+                           Margin="0,0,0,20">
+                        </TextBlock>
+
+
+                        <TextBox x:Name="user" materialDesign:HintAssist.Hint="Username" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,5"/>
+                        <TextBox x:Name="pass" materialDesign:HintAssist.Hint="Password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" Margin="0,5"/>
+
+                        <Grid Margin="0,30,0,20">
+                            <Button Content="Login" HorizontalAlignment="Center" Click="Button_Click"/>
+                        </Grid>
+
+                        <StackPanel>
+                            <Button x:Name="signup" Content="I Dont Have An Account"  Style="{StaticResource MaterialDesignToolButton}" Click="signup_Click"/>
+                        </StackPanel>
+
+                    </StackPanel>
+                </Border>
+            </StackPanel>
+            <Frame x:Name="Main" NavigationUIVisibility="Hidden"/>
+        </Grid>
+    </Border>
+</Page>

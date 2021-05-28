@@ -1,0 +1,351 @@
+﻿<Page x:Class="SchoolApp.ProfilePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      d:DesignHeight="450" d:DesignWidth="700"
+      Loaded="Page_Loaded"
+      Title="ProfilePage">
+
+    <Grid Background="LightGray">
+        <DockPanel>
+
+            <Border DockPanel.Dock="Top">
+
+
+
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="30" 
+                                  Color="LightGray"
+                                  ShadowDepth="0">
+                    </DropShadowEffect>
+                </Border.Effect>
+
+
+                <StackPanel DockPanel.Dock="Top"
+                Orientation="Vertical" 
+                        Height="125" 
+                        Width="auto"
+                        VerticalAlignment="Top"
+                        Background="White">
+
+                    <Button HorizontalAlignment="Left" x:Name="log" Click="log_Click">
+                        Log Out
+                    </Button>
+                    <DockPanel>
+                        <TextBlock DockPanel.Dock="top"
+                               x:Name="TopName"
+                    Text="Names?? Profile" 
+                           Margin="0,20,0,30"
+                           HorizontalAlignment="Center"/>
+
+                        <TextBlock Text="here is your profile where you can see or edit your information"                         
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Bottom"/>
+                    </DockPanel>
+                </StackPanel>
+            </Border>
+
+
+            <Grid>
+                <ScrollViewer >
+                    <DockPanel LastChildFill="True">
+                        <StackPanel HorizontalAlignment="Center"
+                            Margin="20,20,10,20"
+                            Orientation="Horizontal"
+                            
+                            DockPanel.Dock="Left"
+                            >
+
+                            <Border 
+            MinWidth="200"
+            Background="White"
+            VerticalAlignment="Top"
+                            HorizontalAlignment="Stretch"
+            Padding="30"
+            CornerRadius="10"
+            Width="auto"
+            Margin="0,20,0,20">
+
+                                <Border.Effect>
+                                    <DropShadowEffect BlurRadius="30" 
+                                  Color="LightGray"
+                                  ShadowDepth="0">
+                                    </DropShadowEffect>
+                                </Border.Effect>
+
+                                <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                                    <StackPanel>
+                                        <TextBlock Text="Student Information"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Margin="0,0,0,20">
+                                            
+                                            
+                                            <!--<CheckBox
+    x:Name="sName"
+    Content="Enabled" />
+  <TextBox
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="Floating hint in a box"
+    IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />-->
+
+
+
+
+                                        </TextBlock>
+
+
+                                        <TextBlock>Student Name -</TextBlock>
+                                        <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                            <StackPanel Orientation="Horizontal">
+
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="fName"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="enter new name"/>
+
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="lName"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+                                                    Margin="10,0,0,0"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="enter new surname" />
+                                            </StackPanel>
+                                        </Border>
+
+                                        <TextBlock>Student Id -</TextBlock>
+                                        <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                            <StackPanel>
+
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="sId"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="enter new name"
+    IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />
+                                            </StackPanel>
+                                        </Border>
+
+                                        <TextBlock>Username-</TextBlock>
+                                        <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                            <StackPanel>
+
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="username"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignFilledTextBoxEnabledComboBox}" />
+
+                                            </StackPanel>
+                                        </Border>
+
+                                        <TextBlock>Password-</TextBlock>
+                                        <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                            <StackPanel>
+
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="password"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="enter new password"/>
+                                            </StackPanel>
+                                        </Border>
+
+                                        <TextBlock>D.O.B -</TextBlock>
+                                        <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+
+
+                                            <StackPanel>
+
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="addr"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="Address"/>
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="city"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="City"/>
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="pCode"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="Postcode"/>
+                                            </StackPanel>
+
+                                        </Border>
+
+                                        <TextBlock>Credits -</TextBlock>
+                                        <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+
+                                            <StackPanel>
+
+                                                <TextBox
+                                                    BorderThickness="0"
+                                                    x:Name="credits"
+    Style="{StaticResource MaterialDesignFilledTextBox}"
+    VerticalAlignment="Top"
+    AcceptsReturn="True"
+    TextWrapping="Wrap"
+    MaxWidth="400"
+    materialDesign:HintAssist.Hint="enter new name"/>
+                                            </StackPanel>
+
+                                        </Border>
+
+                                        <TextBlock>Enrolled Courses -</TextBlock>
+                                        <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+
+                                            <TextBlock 
+                                                x:Name="ecourse"
+                                        Text="Teacher Number"
+                                        
+                                        Style="{StaticResource MaterialDesignTextBlock}"
+                                         VerticalAlignment="Top"/>
+                                        </Border>
+
+                                    </StackPanel>
+                                </ScrollViewer>
+                            </Border>
+
+
+                        </StackPanel>
+
+                        <Border 
+            MinWidth="200"
+            Background="White"
+            VerticalAlignment="Top"
+                            HorizontalAlignment="Stretch"
+            Padding="30"
+            CornerRadius="10"
+            Width="auto"
+            Margin="0,40,20,20">
+
+                            <Border.Effect>
+                                <DropShadowEffect BlurRadius="30" 
+                                  Color="LightGray"
+                                  ShadowDepth="0">
+                                </DropShadowEffect>
+                            </Border.Effect>
+
+                            <ScrollViewer VerticalScrollBarVisibility="Hidden">
+                                <StackPanel>
+                                    <TextBlock Text="School Information"
+                           FontSize="30"
+                           FontWeight="Bold"
+                           Margin="0,0,0,20">
+                                    </TextBlock>
+
+
+
+
+                                    <TextBlock>Course Name -  
+                                    <Button Click="refresh_Click" x:Name="refresh" Margin="20,0" Content="Save Edits"/></TextBlock>
+                                    <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                        <StackPanel>
+                                            <TextBlock 
+                                                x:Name="cName"
+                                        Text="Course Name"
+                                        Style="{StaticResource MaterialDesignTextBlock}"
+                                         VerticalAlignment="Top"
+                                         materialDesign:HintAssist.Hint="Teacher Name" />
+                                        </StackPanel>
+                                    </Border>
+
+                                    <TextBlock>Teacher Name -</TextBlock>
+                                    <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                        <StackPanel>
+                                            <TextBlock 
+                                                x:Name="tName"
+                                        Style="{StaticResource MaterialDesignTextBlock}"
+                                         VerticalAlignment="Top"
+                                         materialDesign:HintAssist.Hint="Teacher Name" />
+                                        </StackPanel>
+                                    </Border>
+
+                                    <TextBlock>Course Name -</TextBlock>
+                                    <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                        <StackPanel>
+                                            <TextBlock     
+                                                x:Name="cDate"
+                                        Text="Course Start Date"
+                                        Style="{StaticResource MaterialDesignTextBlock}"
+                                         VerticalAlignment="Top"
+                                         materialDesign:HintAssist.Hint="Teacher Name" />
+                                        </StackPanel>
+                                    </Border>
+
+                                    <TextBlock>Enrolment Status -</TextBlock>
+                                    <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                        <StackPanel>
+                                            <TextBlock       
+                                                Name="status"
+                                        Style="{StaticResource MaterialDesignTextBlock}"
+                                         VerticalAlignment="Top"/>
+                                        </StackPanel>
+                                    </Border>
+
+                                    <TextBlock>Teacher Number -</TextBlock>
+                                    <Border BorderThickness="0.25" BorderBrush="Black" Margin="20">
+                                        <TextBlock 
+                                                x:Name ="tNumber"                                        
+                                        Style="{StaticResource MaterialDesignTextBlock}"
+                                         VerticalAlignment="Top"/>
+                                    </Border>
+
+                                    <Button x:Name="enrol" Content="ENROL!" Margin="0,65" Click="enrol_Click">
+
+                                    </Button>
+
+                                </StackPanel>
+                            </ScrollViewer>
+                        </Border>
+
+                    </DockPanel>
+                </ScrollViewer>
+            </Grid>
+        </DockPanel>
+        <Frame x:Name="main" NavigationUIVisibility="Hidden"/>
+    </Grid>
+</Page>
